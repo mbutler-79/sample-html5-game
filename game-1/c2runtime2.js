@@ -461,7 +461,6 @@ var aa, ba, ca, ea, fa, ga, ha, ia, ja, ka, la, pa, qa, ra, sa, ta, ua, wa, xa, 
         else {
             var e = a.toString(),
                 b = this.items;
-      
             b ? b.hasOwnProperty(e) || (b[e] = a, this.xi++, this.We = !1) : (this.items = {}, this.items[e] =
                 a, this.xi = 1, this.We = !1)
         }
@@ -495,9 +494,8 @@ var aa, ba, ca, ea, fa, ga, ha, ia, ja, ka, la, pa, qa, ra, sa, ta, ua, wa, xa, 
                 A(a);
                 var e, f = 0,
                     m = this.items;
-                if (m){
+                if (m)
                     for (e in m) m.hasOwnProperty(e) && (a[f++] = m[e])
-                }
             }
             this.We = !0
         }
@@ -3656,7 +3654,6 @@ function nc(d, n, q, p) {
 })();
 window.cr_getC2Runtime = function() {
     var d = document.getElementById("c2canvas");
-	console.log('********* c2canvas', d)
     return d ? d.c2runtime : window.c2runtime ? window.c2runtime : null
 };
 window.cr_getSnapshot = function(d, n) {
@@ -9858,7 +9855,7 @@ function Ac(d) {
 }
 (function() {
     function d() {}
-	console.log('11111111111111111')
+
     function n() {}
     var q = Ac.prototype;
     q.ka = function(b) {
@@ -9881,12 +9878,9 @@ function Ac(d) {
     };
     var p = q.aa.prototype;
     p.N = function() {
-	
         if ((this.b.ze || this.b.Ed) && "undefined" != typeof game) {
-		console.log('22222222222222')
             var b = this;
             game.setUp();
-	
             game.onLoginSucceeded = function(d) {
                 b.NA = d.playerId;
                 b.MA = d.playerDisplayName;
@@ -9906,23 +9900,19 @@ function Ac(d) {
                     b)
             };
             game.onGetPlayerScoreSucceeded = function(d) {
-		console.log('scoreeeeeeeeeee1111')
                 b.PA = d;
                 b.Gb = game.tag;
                 b.b.trigger(Ac.prototype.e.Nt, b)
             };
             game.onGetPlayerScoreFailed = function() {
-		console.log('scoreeeeeeeeeee222222')
                 b.Gb = game.tag;
                 b.b.trigger(Ac.prototype.e.Mt, b)
             };
             game.onSubmitScoreSucceeded = function() {
-		console.log('scoreeeeeeeeeee33333')
                 b.Gb = game.tag;
                 b.b.trigger(Ac.prototype.e.ju, b)
             };
             game.onSubmitScoreFailed = function() {
-		console.log('scoreeeeeeeeeee44444')
                 b.Gb = game.tag;
                 b.b.trigger(Ac.prototype.e.iu, b)
             };
@@ -10750,8 +10740,8 @@ function Ec(d) {
         if (!1 === this.Yi) return this.ph
     };
     q.It = function() {
-        if (!1 ===this.Ti) 
-            return this.nh
+        if (!1 ===
+            this.Ti) return this.nh
     };
     q.Et = function() {
         if (!1 === this.Si) return this.mh
